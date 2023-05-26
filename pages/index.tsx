@@ -8,7 +8,7 @@ export async function getStaticProps() {
     process.env.SUPABASE_SERVICE_ROLE_KEY || ''
   )
 
-  const { data } = await supabaseAdmin.from('images').select('*').order('id')
+  const { data } = await supabaseAdmin.from('205').select('*').order('id',{ascending:false})
   return {
     props: {
       images: data,
@@ -22,10 +22,10 @@ function cn(...classes: string[]) {
 
 type Image = {
   id: number
-  href: string
   imageSrc: string
-  name: string
-  username: string
+  plano: string
+  elemento: string
+  href: string
 }
 
 export default function Gallery({ images }: { images: Image[] }) {
@@ -60,8 +60,8 @@ function BlurImage({ image }: { image: Image }) {
           onLoadingComplete={() => setLoading(false)}
         />
       </div>
-      <h3 className="mt-4 text-sm text-gray-700">{image.name}</h3>
-      <p className="mt-1 text-lg font-medium text-gray-900">{image.username}</p>
+      <h3 className="mt-4 text-sm text-gray-700">{image.plano}</h3>
+      <p className="mt-1 text-lg font-medium text-gray-900">{image.elemento}</p>
     </a>
   )
 }
