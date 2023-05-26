@@ -45,7 +45,7 @@ function BlurImage({ image }: { image: Image }) {
 
   return (
     <a href={image.href} className="group">
-      <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+      <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8 shadow-lg">
         <Image
           alt=""
           src={image.imageSrc}
@@ -60,8 +60,8 @@ function BlurImage({ image }: { image: Image }) {
           onLoadingComplete={() => setLoading(false)}
         />
       </div>
-      <h3 className="mt-4 text-sm text-gray-700">{image.plano}</h3>
-      <p className="mt-1 text-lg font-medium text-gray-900">{image.elemento}</p>
+      <h3 className="mt-2 text-sm text-gray-700">{image.plano}</h3>
+      <p className="mt-0 text-lg font-medium text-gray-900 text-shadow">{image.elemento}</p>
     </a>
   )
 }
