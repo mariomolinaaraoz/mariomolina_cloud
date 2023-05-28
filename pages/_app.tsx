@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-  <div className='bg-slate-50'>
+  <div className='bg-slate-100'>
     <Navbar/>
       <div>Mario Molina</div>
       <Component {...pageProps} />

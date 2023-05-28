@@ -1,43 +1,25 @@
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Bars3Icon,XMarkIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image';
 
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const [color, setColor] = useState('#d0dde5');
-  const [textColor, setTextColor] = useState('white');
-
+  
   const handleNav = () => {
     setNav(!nav);
   };
 
-  useEffect(() => {
-    const changeColor = () => {
-      if (window.scrollY >= 90) {
-        setColor('#d0dde5');
-        setTextColor('#3c678a');
-      } else {
-        setColor('c9c9c9');
-        setTextColor('#3c678a');
-      }
-    };
-    window.addEventListener('scroll', changeColor);
-  }, []);
-
   return (
-    <div
-      style={{ backgroundColor: `${color}` }}
-      className='fixed left-0 top-0 w-full z-10 ease-in duration-300'
-    >
+    <div className='bg-sky-700 fixed left-0 top-0 w-full z-10 drop-shadow-[0_4px_3px_rgba(0,0,0,0.25)]'>
       <div className='max-w-[1240px] m-auto flex justify-between items-center p-2 text-white'>
       <Link href="/">
             <a>
               <Image src="/assets/logo.svg" width="140" height="30" alt="Logo" />
             </a>
           </Link>
-        <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
+        <ul  className='hidden sm:flex'>
           <li className='p-1'>
             <Link href='/'>Home</Link>
           </li>
@@ -55,9 +37,9 @@ const Navbar = () => {
         {/* Mobile Button */}
         <div onClick={handleNav} className='block sm:hidden z-10'>
           {nav ? (
-            <XMarkIcon className="w-6 h-6" style={{ color: `${textColor}` }} />
+            <XMarkIcon className="w-6 h-6" />
           ) : (
-            <Bars3Icon className="w-6 h-6" style={{ color: `${textColor}` }} />
+            <Bars3Icon className="w-6 h-6" />
           )}
         </div>
         {/* Mobile Menu */}
