@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { Bars3Icon,XMarkIcon } from '@heroicons/react/24/solid'
+import Image from 'next/image';
 
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const [color, setColor] = useState('#c9c9c9');
+  const [color, setColor] = useState('#d0dde5');
   const [textColor, setTextColor] = useState('white');
 
   const handleNav = () => {
@@ -15,11 +16,11 @@ const Navbar = () => {
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
-        setColor('#c9c9c9');
-        setTextColor('#ffffff');
+        setColor('#d0dde5');
+        setTextColor('#3c678a');
       } else {
         setColor('c9c9c9');
-        setTextColor('#000000');
+        setTextColor('#3c678a');
       }
     };
     window.addEventListener('scroll', changeColor);
@@ -31,11 +32,11 @@ const Navbar = () => {
       className='fixed left-0 top-0 w-full z-10 ease-in duration-300'
     >
       <div className='max-w-[1240px] m-auto flex justify-between items-center p-2 text-white'>
-        <Link href='/'>
-          <h1 style={{ color: `${textColor}` }} className='font-bold text-2xl'>
-            &lt;mario_molina&gt;
-          </h1>
-        </Link>
+      <Link href="/">
+            <a>
+              <Image src="/assets/logo.svg" width="140" height="30" alt="Logo" />
+            </a>
+          </Link>
         <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
           <li className='p-1'>
             <Link href='/'>Home</Link>
