@@ -8,7 +8,7 @@ const Footer = () => {
           Todos los derechos reservados
         </h1>
         <div className='flex items-center'>
-          <h1 className="mb-2 mr-2 text-xs text-gray-500">Designed by </h1>
+          <h1 className="mb-2 mr-0 text-xs text-gray-500 w-20">Designed by </h1>
           <a href="https://www.mariomolinaaraoz.com.ar/">
             <Image
               className=""
@@ -18,7 +18,7 @@ const Footer = () => {
               alt="Logo"
             />
           </a>
-          <h1 className="mb-2 ml-2 text-xs text-gray-500"> 2022 </h1>
+          <h1 className="mb-2 ml-1 text-xs text-gray-500"> 2022 </h1>
         </div>
       </div>
     </div>

@@ -26,7 +26,7 @@ export default function Images() {
 	];
 
 	return (
-		<div className="relative mx-auto max-w-7xl p-2 sm:px-24 mt-20 flex justify-center items-center gap-10 relative overflow-hidden h-96">
+		<div className="relative mx-auto max-w-7xl p-2 sm:px-24 mt-20 flex justify-center items-center gap-5 relative overflow-hidden h-96">
 			{images.map(({ src, rotate }, index) => {
 				return (
 					<div

@@ -5,21 +5,17 @@ import React from 'react'
 export default function Navbar() {
   const links = [
     {
-      text: 'About',
-      path: '/about',
+      text: 'Nort VPN',
+      path: '/#',
     },
     {
-      text: 'Article',
-      path: '/article',
+      text: 'Estructura 205',
+      path: '/#',
     },
     {
-      text: 'Projects',
-      path: '/projects',
-    },
-    {
-      text: 'Speaking',
-      path: '/Speaking',
-    }    
+      text: 'Pexels',
+      path: '/#',
+    }
   ]
 
   return (
@@ -27,7 +23,7 @@ export default function Navbar() {
       <a href="https://mariomolina-cloud.vercel.app/">
         <Image src="/assets/logo.svg" width="150" height="30" alt="Logo" />
       </a>
-      <div className=" flex items-center gap-6 rounded-full border border-zinc-700 bg-zinc-800 px-5 py-3 text-base text-slate-200 shadow-md">
+      <div className=" flex items-center gap-6 rounded-full border border-zinc-700 bg-zinc-800 px-5 py-3 text-base text-slate-200 shadow-md  hidden">
         {links.map(({ text, path }, index) => {
           return (
             <Link key={index} href={path}>

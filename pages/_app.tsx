@@ -4,19 +4,23 @@ import Navbar from './components/Navbar'
 import Images from './components/Images'
 import Social from './components/Social'
 import Footer from './components/Footer'
+import FloatingButton from './components/FloatingButton'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <div className="bg-slate-300">
+      <div className="bg-slate-200">
         <div className="relative mx-auto max-w-7xl p-2 sm:px-24">
           <Navbar />
           <div className="mt-20 flex max-w-2xl flex-col gap-5">
             <h1 className="text-4xl font-bold tracking-tight text-gray-700 sm:text-5xl">
-              Your data, your memories and
+              Your data,
             </h1>
             <h1 className="text-4xl font-bold tracking-tight text-gray-700 sm:text-5xl">
-              your work, save...
+              your memories and your work,
+            </h1>
+            <h1 className="text-4xl font-bold tracking-tight text-gray-700 sm:text-5xl">
+              safe and secure.
             </h1>
             <p className=" text-base text-zinc-600">
               {
@@ -29,6 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </div>
         <Component {...pageProps} />
         <Footer />
+        <FloatingButton/>
       </div>
     </>
   )
