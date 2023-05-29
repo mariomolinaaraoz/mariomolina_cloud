@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:locale" content="es-Argentina" />
         <meta
           property="og:description"
-          content="Mario Molina - Cloud Services"
+          content="Cloud storage: security, accessibility, unlimited storage, collaboration, data protection, synchronization and freeing up space."
         />
         <meta
           property="og:image"
