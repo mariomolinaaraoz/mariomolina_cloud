@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <div className="fixed left-0 bottom-0 z-10 w-full bg-slate-800 duration-300 ease-in">
-      <div className="mx-6 flex max-w-[1240px] items-center justify-between pt-1 text-white">
+    <div className="fixed left-0 bottom-0 z-10 w-full bg-slate-800">
+      <div className="mx-auto px-6 flex max-w-[1240px] items-center justify-between pt-1 text-white">
         <h1 className="mb-2 mr-2 text-xs text-gray-500">
           Todos los derechos reservados
         </h1>
