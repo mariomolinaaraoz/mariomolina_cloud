@@ -5,3 +5,4 @@ module.exports = {
     domains: ['fvvtqpkgirpnlmiemgcn.supabase.co'],
   },
 }
+

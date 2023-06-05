@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.fondo{
+    background-color: var(var_background);
+}
+
 
   
   
