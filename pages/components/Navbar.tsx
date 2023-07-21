@@ -1,36 +1,27 @@
-import Link from 'next/link'
+import { FaSun, FaMoon } from 'react-icons/fa'
+import { Switch } from '@nextui-org/react'
 import Image from 'next/image'
-import React from 'react'
+
+import { useTheme as useNextTheme } from 'next-themes'
+import { useTheme } from '@nextui-org/react'
 
 export default function Navbar() {
-  const links = [
-    {
-      text: 'Nort VPN',
-      path: '/#',
-    },
-    {
-      text: 'Estructura 205',
-      path: '/#',
-    },
-    {
-      text: 'Pexels',
-      path: '/#',
-    }
-  ]
+  const { setTheme } = useNextTheme()
+  const { isDark } = useTheme()
 
   return (
     <nav className="flex w-full items-center justify-between">
       <a href="https://mariomolina-cloud.vercel.app/">
         <Image src="/assets/logo.svg" width="150" height="30" alt="Logo" />
       </a>
-      <div className=" flex items-center gap-6 rounded-full border border-zinc-700 bg-zinc-800 px-5 py-3 text-base text-slate-200 shadow-md  hidden">
-        {links.map(({ text, path }, index) => {
-          return (
-            <Link key={index} href={path}>
-              <a className="cursor-pointer hover:text-blue-500">{text}</a>
-            </Link>
-          )
-        })}
+      <div>
+        <Switch
+          checked={isDark}
+          size="md"
+          iconOn={<FaMoon />}
+          iconOff={<FaSun />}
+          onChange={(e) => setTheme(e.target.checked ? 'dark' : 'light')}
+        />
       </div>
     </nav>
   )
