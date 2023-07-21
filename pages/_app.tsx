@@ -23,10 +23,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <NextUIProvider>
       <Head>
         {/* Favicon para modo claro */}
-        <link rel="icon" href="/favicon-light.png" />
+        <link rel="icon" href="/favicon-light.io" />
 
         {/* Favicon para modo oscuro */}
-        <link rel="icon" href="/favicon-dark.png" media="(prefers-color-scheme: dark)" />
+        <link rel="icon" href="/favicon-dark.io" media="(prefers-color-scheme: dark)" />
 
         <link
           rel="apple-touch-icon"
