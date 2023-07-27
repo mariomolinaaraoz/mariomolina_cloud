@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link rel="manifest" href="/site.webmanifest" />
 
-        <meta property="og:url" content="https://mariomolinaaraoz.store" />
+        <meta property="og:url" content="https://mariomolinaaraoz.com.ar" />
         <meta property="og:title" content="Mario Molina - Cloud Services" />
         <meta property="og:locale" content="es-Argentina" />
         <meta
